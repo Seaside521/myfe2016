@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>选项卡</title>
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+        }
+        ul,li{
+            list-style: none;
+        }
+        a{
+            text-decoration: none;
+        }
+        #container li{
+            float: left;
+            width: 100px;
+            height: 30px;
+            background: gray;
+            margin-right: 10px;
+            text-align: center;
+            line-height: 30px;
+        }
+        #container{
+            width: 400px;
+            height: 200px;
+            margin: 50px auto;
+
+        }
+        #nav{
+            height: 30px;
+        }
+        #content{
+            height: 170px;
+            width: 400px;
+            background: gray;
+            border-top: 2px solid black;
+        }
+        #nav .selected{
+            background: red;
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <div id="container">
+        <ul id="nav">
+            <li class="selected">111</li>
+            <li >222</li>
+            <li >333</li>
+        </ul>
+        <div id="content">
+            我
+        </div>
+    </div>
+    <script>
+        var data = ["我","是","神"];
+        var oNav = document.getElementById("nav")
+        var ali = oNav.getElementsByTagName("li")
+        var oContent = document.getElementById("content")
+        for(var i=0; i<ali.length; i++){
+            ali[i].index =i;
+            ali[i].onclick =function(){
+                for (var i=0;i<ali.length;i++){
+                    ali[i].className ="";
+
+                }
+                this.className ="selected";
+                oContent.innerHTML =data[this.index]
+            }
+        }
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,75 @@
+.<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>选项卡2</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        ul,li{
+            list-style: none;
+        }
+        #contianer{
+            width: 400px;
+            height: 200px;
+
+        }
+        #contianer ul{
+            height: 50px;
+        }
+        #contianer li{
+            float: left;
+            width: 100px;
+            height: 50px;
+            background: green;
+        }
+        #contianer div{
+            background: gray;
+            width: 300px;
+            height: 200px;
+            border-top: dashed blue 2px;
+        }
+        #contianer .one{
+            background: red;
+
+        }
+
+    </style>
+</head>
+<body>
+    <div id="contianer">
+        <ul >
+            <li class="one">1</li>
+            <li>2</li>
+            <li>3</li>
+        </ul>
+        <div id="content">
+           zhang
+        </div>
+    </div>
+    <script>
+        var data =["zhang","hai","bin"];
+        var aContianer=document.getElementById("contianer");
+        var ali =document.getElementsByTagName("li");
+        var adiv=document.getElementById("content");
+
+        for (i=0;i<ali.length;i++){
+            ali[i].index= i;
+            ali[i].onclick =function(){
+                for(i=0;i<ali.length;i++){
+                    ali[i].className="";
+                }
+                this.className="one";
+                adiv.innerHTML=data[this.index];
+
+
+            }
+        }
+
+    </script>
+
+
+</body>
+</html>

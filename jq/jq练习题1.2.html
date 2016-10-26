@@ -1,0 +1,59 @@
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .selected{
+            background: red;
+
+        }
+    </style>
+</head>
+<body>
+<script src="jquery-1.12.4.js"type="text/javascript"></script>
+<script src="jq/demo1.js "type="text/javascript"></script>
+<script type="text/javascript">
+
+
+    $(function () {
+                $(":input").on("focus",function(){
+                    this.value="";
+                }).on("blur",function(){
+                   if(this.value==""){
+                       this.value=this.defaultValue;
+                   }
+                })
+            }
+
+    )
+</script>
+
+
+
+
+
+
+
+
+
+<form action=""method="post"id="form"></form>
+<div>
+    <legend>个人基本信息</legend>
+    <div>
+        <label for="username">名称：</label>
+        <input id="username" type="text" value="姓名" />
+    </div>
+    <div>
+        <label for="1">密码:</label>
+        <input id="1" type="text" value="你只有三次机会"/>
+
+    </div>
+    <div>
+        <label for="2">详细信息：</label>
+        <textarea name="" id="2" cols="30" rows="10"></textarea>
+    </div>
+
+</div>
+
+</body>
+</html>

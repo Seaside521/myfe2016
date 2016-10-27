@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<table>
+
+    <thead>
+    <tr><th>姓名</th><th>性别</th><th>暂住地</th></tr>
+    <tbody>
+    <tr><td><input type="radio"/></td><td>占三</td><td>男</td><td>1</td></tr>
+    <tr><td><input type="radio"/></td><td>李四</td><td>男</td><td>2</td></tr>
+    <tr><td><input type="radio"/></td><td>六五</td><td>male</td><td>3</td></tr>
+    <tr><td><input type="radio"/></td><td>拉拉</td><td>femal</td><td>4</td></tr>
+    <tr><td><input type="radio"/></td><td>wwww</td><td>男</td><td>5</td></tr>
+    <tr><td><input type="radio"/></td><td>卡卡</td><td>男</td><td>6</td></tr>
+    </tbody>
+    </thead>
+
+</table>
+<script src="jquery-1.12.4.js"></script>
+<script>
+    $(function(){
+        $('tr').on('click',function()            {
+            $(this).css('background','blue');
+            $(this).siblings().css('background','');
+            $(this).find('input').prop('checked',true);
+            $(this).siblings().find('input').prop('checked',false);
+
+        })
+
+
+    })
+</script>
+
+</body>
+</html>

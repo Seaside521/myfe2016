@@ -41,6 +41,13 @@
         #nav .selected{
             background: red;
         }
+        #content div{
+            display: none;
+
+        }
+        #content .selected1{
+            display: block;
+        }
 
 
 
@@ -54,26 +61,36 @@
             <li >333</li>
         </ul>
         <div id="content">
-            我
+            <div class="selected1">wo</div>
+            <div>ai</div>
+            <div>ni</div>
         </div>
     </div>
     <script>
-        var data = ["我","是","神"];
-        var oNav = document.getElementById("nav")
-        var ali = oNav.getElementsByTagName("li")
-        var oContent = document.getElementById("content")
-        for(var i=0; i<ali.length; i++){
-            ali[i].index =i;
-            ali[i].onclick =function(){
-                for (var i=0;i<ali.length;i++){
-                    ali[i].className ="";
+        var ali = document.getElementsByTagName('li');
+        var oDiv =document.getElementById('content');
+        var aD =oDiv.getElementsByTagName('div');
 
+
+
+
+        for(i=0;i<ali.length;i++){
+            ali[i].xx=i;
+
+            ali[i].onclick= function () {
+                for(i=0;i<3;i++){
+                    ali[i].className='';
+                    aD[i].className='';
                 }
-                this.className ="selected";
-                oContent.innerHTML =data[this.index]
+
+
+
+                ali[this.xx].className='selected';
+                aD[this.xx].className='selected1';
+
+
             }
         }
-
     </script>
 
 </body>

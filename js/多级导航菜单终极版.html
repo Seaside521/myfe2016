@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>多级导航</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul,li{
+            list-style: none;
+        }
+        a{
+            text-decoration: none;
+        }
+        .mainmenu{
+            float: left;
+            margin-right: 5px;
+        }
+        .mainmenu a{
+            float: left;
+            background: gray;
+            width: 100px;
+            height: 50px;
+            text-align: center;
+            line-height: 50px;
+        }
+        .submenu{
+            display: none;
+        }
+        /*.mainmenu:hover .submenu{*/
+            /*display: block;*/
+        /*}*/
+
+    </style>
+</head>
+<body>
+    <ul id="menu">
+        <li class="mainmenu">
+            <a href="">我</a>
+            <ul class="submenu">
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+            </ul>
+        </li>
+
+        <li class="mainmenu">
+            <a href="">要</a>
+            <ul class="submenu">
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+            </ul>
+        </li>
+
+        <li class="mainmenu">
+            <a href="">飞</a>
+            <ul class="submenu">
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+            </ul>
+        </li>
+
+
+    </ul>
+<script>
+    var aMainmenu = document.getElementsByTagName('li')
+
+    for(i=0;i<aMainmenu.length;i++){
+        if( aMainmenu[i].className=='mainmenu'){
+            aMainmenu[i].onmouseover=function(){
+                this.getElementsByTagName('ul')[0].style.display='block'
+
+
+        }
+            aMainmenu[i].onmouseout=function(){
+                var T  = this.getElementsByTagName('ul')[0]
+                T.style.display='none'}
+//
+        }}
+
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>折叠菜单</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        ul,li{
+            list-style: none;
+        }
+        a{
+            text-decoration: none;
+        }
+        #menu .main-menu h1{
+            width: 200px;
+            height: 100px;
+            background: black;
+            color: white;
+            text-align: center;
+            line-height: 100px;
+        }
+        .sub-menu {
+            display: none;
+        }
+
+
+    </style>
+</head>
+<body>
+    <ul id="menu">
+        <li class="main-menu">
+            <h1>管理区</h1>
+            <ul class="sub-menu">
+                <li>111</li>
+                <li>222</li>
+                <li>333</li>
+            </ul>
+        </li>
+        <li class="main-menu">
+             <h1>交流区</h1>
+            <ul class="sub-menu">
+                <li>111</li>
+                <li>222</li>
+                <li>333</li>
+            </ul>
+        </li>
+    </ul>
+    <script>
+       var aUL=document.getElementsByClassName('sub-menu');
+        var aH1 =document.getElementsByTagName('h1');
+
+
+
+        for(var i=0;i<aH1.length;i++){
+            aH1[i].index=i;
+            aH1[i].bFlag =false;
+            aH1[i].onclick=function(){
+                if(this.bFlag){
+                    aUL[this.index].style.display='none';
+
+
+                }
+                else{
+                    aUL[this.index].style.display='block';
+                }
+                this.bFlag = !this.bFlag;
+            }
+        }
+    </script>
+</body>
+</html>

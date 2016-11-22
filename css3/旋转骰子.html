@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>shaizi </title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            -webkit-perspective:800px;
+        }
+        #sz{
+            margin: 100px auto;
+            position: relative;
+            width: 200px;
+            height: 200px;
+
+            -webkit-transform-style:preserve-3d ;
+            -webkit-animation: xxx 2s linear infinite;
+        }
+        @-webkit-keyframes xxx {
+            from{
+
+            }
+            to{
+                -webkit-transform: rotateX(-360deg) rotateY(-360deg) ;
+            }
+        }
+
+
+        .shape{
+            width: 200px;
+            height: 200px;
+            border: solid black 2px;
+            background:gray ;
+            color: gold;
+            font-size: 80px;
+            text-align: center;
+            line-height: 200px;
+            position: absolute;
+            opacity: 0.6;
+            border-radius: 10px;
+
+
+        }
+        #one{
+        -webkit-transform: rotateX(90deg) translateZ(100px)
+        }
+        #two{
+            -webkit-transform:translateZ(100px)
+        }
+        #three{
+            -webkit-transform: rotateY(90deg) translateZ(100px)
+        }
+        #four{
+            -webkit-transform: rotateY(180deg) translateZ(100px)
+        }
+        #five{
+            -webkit-transform: rotateY(-90deg) translateZ(100px)
+        }
+        #six{
+            -webkit-transform: rotateX(-90deg) translateZ(100px)
+        }
+
+    </style>
+</head>
+<body>
+<div id="sz">
+    <div id="one" class="shape">1</div>
+    <div id="two" class="shape">2</div>
+    <div id="three" class="shape">3</div>
+    <div id="four" class="shape">4</div>
+    <div id="five" class="shape">5</div>
+    <div id="six" class="shape">6</div>
+</div>
+
+</body>
+</html>

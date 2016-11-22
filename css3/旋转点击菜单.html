@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>旋转点击菜单</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #container{
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            width: 50px;
+            height: 50px;
+        }
+        #home{
+            width: 50px;
+            height:50px;
+            position: absolute;
+            -webkit-transition:transform 1s ease-in-out ;
+
+
+        }
+        .menu{
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            -webkit-transition:transform 1s ease-in-out ;
+        }
+    </style>
+</head>
+<body>
+<div id="container">
+
+    <img class="menu" src="../img/旋转点击菜单/close.png" alt=""/>
+    <img class="menu" src="../img/旋转点击菜单/full.png" alt=""/>
+    <img class="menu" src="../img/旋转点击菜单/open.png" alt=""/>
+    <img class="menu" src="../img/旋转点击菜单/prev.png" alt=""/>
+    <img class="menu" src="../img/旋转点击菜单/refresh.png" alt=""/>
+    <div id="home">
+        <img src="../img/旋转点击菜单/home.png" alt=""/>
+    </div>
+</div>
+<script>
+    var oHome = document.getElementById('home');
+    var aMenu = document.getElementsByClassName('menu');
+    var oFlag = false;
+    oHome.onclick = function(){
+        if(!oFlag) {
+            this.style.WebkitTransform = 'rotate(-360deg)';
+            for (var i = 0; i < aMenu.length; i++) {
+                aMenu[i].style.WebkitTransform = "translate(" + (-180) * Math.sin((i * 22.5) * Math.PI / 180) + "px," + (-180) * Math.cos((i * 22.5) * Math.PI / 180) + "px) rotate(-360deg) ";
+            }
+        }
+        else{
+            this.style.WebkitTransform = ' rotate(0deg)';
+            for (var i = 0; i < aMenu.length; i++) {
+                aMenu[i].style.WebkitTransform = "translate(0px, 0px) rotate(0deg) ";
+            }
+
+        }
+        oFlag = !oFlag;
+
+    }
+</script>
+
+
+</body>
+</html>

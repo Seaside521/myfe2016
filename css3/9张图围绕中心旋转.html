@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>旋转的ssw</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #container{
+            position: relative;
+            -webkit-perspective: 800px;
+            -webkit-perspective-origin: 50% -100%;
+
+        }
+        #content{
+            width: 200px;
+            height: 134px;
+            margin: 200px auto;
+            position: relative;
+            -webkit-transform-style: preserve-3d;
+            -webkit-animation:xxx 10s linear infinite ;
+        }
+        @-webkit-keyframes xxx{
+            from{}
+            to{
+                -webkit-transform:  rotateY(360deg) ;
+            }
+        }
+        #content img{
+            width: 200px;
+            height: 134px;
+            position: absolute;
+            left: 0;top: 0;
+            -webkit-transition: -webkit-transform 1s ease;
+            opacity: 0.8;
+
+        }
+
+        .one  {  -webkit-transform-style: preserve-3d;
+            -webkit-animation:x1 1s linear forwards ;
+           }
+        @-webkit-keyframes x1{
+            from{}
+            to{
+                -webkit-transform:   translateZ(300px);
+            }
+        }
+        .two  {  -webkit-transform-style: preserve-3d;
+            -webkit-animation:x2 1s linear forwards ;
+        }
+        @-webkit-keyframes x2{
+            from{}
+            to{
+                -webkit-transform: rotateY(40deg)  translateZ(300px);;
+            }
+        }
+        .three  {  -webkit-transform-style: preserve-3d;
+            -webkit-animation:x3 1s linear forwards ;
+        }
+        @-webkit-keyframes x3{
+            from{}
+            to{
+                -webkit-transform: rotateY(80deg)  translateZ(300px);
+            }
+        }
+        .four  {  -webkit-transform-style: preserve-3d;
+            -webkit-animation:x4 1s linear forwards ;
+        }
+        @-webkit-keyframes x4{
+            from{}
+            to{
+                -webkit-transform: rotateY(120deg)  translateZ(300px);
+            }
+        }
+        .five  {  -webkit-transform-style: preserve-3d;
+            -webkit-animation:x5 1s linear forwards ;
+        }
+        @-webkit-keyframes x5{
+            from{}
+            to{
+                -webkit-transform: rotateY(160deg)  translateZ(300px);
+            }
+        }
+        .six {  -webkit-transform-style: preserve-3d;
+            -webkit-animation:x6 1s linear forwards ;
+        }
+        @-webkit-keyframes x6{
+            from{}
+            to{
+                -webkit-transform:  rotateY(200deg) translateZ(300px);
+            }
+        }
+        .seven  {  -webkit-transform-style: preserve-3d;
+            -webkit-animation:x7 1s linear forwards ;
+        }
+        @-webkit-keyframes x7{
+            from{}
+            to{
+                -webkit-transform:  rotateY(240deg) translateZ(300px);
+            }
+        }
+        .eight  {  -webkit-transform-style: preserve-3d;
+            -webkit-animation:x8 1s linear forwards ;
+        }
+        @-webkit-keyframes x8{
+            from{}
+            to{
+                -webkit-transform:  rotateY(280deg) translateZ(300px);
+            }
+        }
+        .nine {  -webkit-transform-style: preserve-3d;
+            -webkit-animation:x9 1s linear forwards ;
+        }
+        @-webkit-keyframes x9{
+            from{}
+            to{
+                -webkit-transform: rotateY(320deg)  translateZ(300px);
+            }
+        }
+
+
+        /*.four {  -webkit-transform: rotateY(120deg) translateZ(300px);  }*/
+        /*.five {  -webkit-transform: rotateY(160deg) translateZ(300px);  }*/
+        /*.six  {  -webkit-transform: rotateY(200deg) translateZ(300px);  }*/
+        /*.seven{  -webkit-transform: rotateY(240deg) translateZ(300px);  }*/
+        /*.eight{  -webkit-transform: rotateY(280deg) translateZ(300px);  }*/
+        /*.nine {  -webkit-transform: rotateY(320deg) translateZ(300px);  }*/
+    </style>
+</head>
+<body>
+<div id="container">
+    <div id="content">
+        <img  src="../img/ssw.jpeg" alt=""/>
+        <img src="../img/qyc.jpeg" alt=""/>
+        <img src="../img/jg.jpg" alt=""/>
+        <img  src="../img/ssw.jpeg" alt=""/>
+        <img  src="../img/qyc.jpeg" alt=""/>
+        <img src="../img/jg.jpg" alt=""/>
+        <img  src="../img/ssw.jpeg" alt=""/>
+        <img  src="../img/qyc.jpeg" alt=""/>
+        <img  src="../img/jg.jpg" alt=""/>
+    </div>
+</div>
+<script>
+    var oContent = document.getElementById('content');
+    var aImg =document.getElementsByTagName('img');
+    oContent.onclick = function(){
+        aImg[0].className='one';
+        aImg[1].className='two';
+        aImg[2].className='three';
+        aImg[3].className='four';
+        aImg[4].className='five';
+        aImg[5].className='six';
+        aImg[6].className='seven';
+        aImg[7].className='eight';
+        aImg[8].className='nine';
+
+    }
+
+</script>
+
+
+</body>
+</html>
